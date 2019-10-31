@@ -27,5 +27,5 @@ void CWinAPIHandler::DrawPoint( short _X, short _Y, char ch ) const
 	coord.Y = _Y;
 	::SetConsoleCursorPosition( m_console_output_handle, coord );
 
-	::putchar(ch);		// TODO: Bad case handling here maybe
+	::putchar(ch);		// TODO: Bad case handling here maybe !!!
 }

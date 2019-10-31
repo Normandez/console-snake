@@ -8,10 +8,10 @@ CGameField::CGameField( CWinAPIHandler* const winapi_handler, short width, short
 	  m_wall_ch(wall_ch)
 {
 	m_walls.reserve(4);
-	m_walls.push_back( CWall( winapi_handler, DIRECTION_Horizontal, GAMECOORD( 0, 0 ), GAMECOORD( m_width, 0 ), m_wall_ch ) );
-	m_walls.push_back( CWall( winapi_handler, DIRECTION_Horizontal, GAMECOORD( 0, m_height ), GAMECOORD( m_width, m_height ), m_wall_ch ) );
-	m_walls.push_back( CWall( winapi_handler, DIRECTION_Vertical, GAMECOORD( 0, 0 ), GAMECOORD( 0, m_height ), m_wall_ch ) );
-	m_walls.push_back( CWall( winapi_handler, DIRECTION_Vertical, GAMECOORD( m_width, 0 ), GAMECOORD( m_width, m_height ), m_wall_ch ) );
+	m_walls.push_back( CWall( winapi_handler, WALL_DIRECTION_Horizontal, GAME_COORD( 0, 0 ), GAME_COORD( m_width, 0 ), m_wall_ch ) );
+	m_walls.push_back( CWall( winapi_handler, WALL_DIRECTION_Horizontal, GAME_COORD( 0, m_height ), GAME_COORD( m_width, m_height ), m_wall_ch ) );
+	m_walls.push_back( CWall( winapi_handler, WALL_DIRECTION_Vertical, GAME_COORD( 0, 0 ), GAME_COORD( 0, m_height ), m_wall_ch ) );
+	m_walls.push_back( CWall( winapi_handler, WALL_DIRECTION_Vertical, GAME_COORD( m_width, 0 ), GAME_COORD( m_width, m_height ), m_wall_ch ) );
 }
 
 CGameField::~CGameField()

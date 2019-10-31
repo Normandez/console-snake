@@ -2,6 +2,7 @@
 #define CGAMEWORLD_H
 
 #include "CGameField.h"
+#include "CSnake.h"
 
 class CWinAPIHandler;
 
@@ -15,6 +16,7 @@ public:
 
 private:
 	CGameField m_game_field;
+	CSnake m_snake;
 
 };
 

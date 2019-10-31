@@ -1,21 +1,15 @@
 #ifndef CPOINT_H
 #define CPOINT_H
 
+#include "SContext.h"
+
 class CWinAPIHandler;
-
-struct GAMECOORD
-{
-	short X;
-	short Y;
-
-	GAMECOORD( short _x, short _y ) : X(_x), Y(_y){}
-};
 
 class CPoint
 {
 public:
 	CPoint( CWinAPIHandler* const winapi_handler, short x, short y, char ch );
-	CPoint( const GAMECOORD& coord, char ch );
+	CPoint( CWinAPIHandler* const winapi_handler, const GAME_COORD& coord, char ch );
 	~CPoint();
 
 	void Draw() const;
@@ -23,7 +17,7 @@ public:
 private:
 	CWinAPIHandler* m_winapi_handler;
 
-	const GAMECOORD m_coord;
+	const GAME_COORD m_coord;
 	const char m_ch;
 
 };

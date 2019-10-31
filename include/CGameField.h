@@ -2,6 +2,7 @@
 #define CGAMEFIELD_H
 
 #include "CWall.h"
+#include "SContext.h"
 
 class CWinAPIHandler;
 

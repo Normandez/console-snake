@@ -3,14 +3,15 @@
 
 CPoint::CPoint( CWinAPIHandler* const winapi_handler, short x, short y, char ch )
 	: m_winapi_handler(winapi_handler),
-	  m_coord( GAMECOORD( x, y ) ),
+	  m_coord( GAME_COORD( x, y ) ),
 	  m_ch(ch)
 {
 	
 }
 
-CPoint::CPoint( const GAMECOORD& coord, char ch )
-	: m_coord(coord),
+CPoint::CPoint( CWinAPIHandler* const winapi_handler, const GAME_COORD& coord, char ch )
+	: m_winapi_handler(winapi_handler),
+	  m_coord(coord),
 	  m_ch(ch)
 {
 

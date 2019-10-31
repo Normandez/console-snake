@@ -119,6 +119,7 @@
     <ClCompile Include="src\CGameField.cpp" />
     <ClCompile Include="src\CGameWorld.cpp" />
     <ClCompile Include="src\CPoint.cpp" />
+    <ClCompile Include="src\CSnake.cpp" />
     <ClCompile Include="src\CWall.cpp" />
     <ClCompile Include="src\CWinAPIHandler.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -128,8 +129,10 @@
     <ClInclude Include="include\CGameField.h" />
     <ClInclude Include="include\CGameWorld.h" />
     <ClInclude Include="include\CPoint.h" />
+    <ClInclude Include="include\CSnake.h" />
     <ClInclude Include="include\CWall.h" />
     <ClInclude Include="include\CWinAPIHandler.h" />
+    <ClInclude Include="include\SContext.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,11 +1,11 @@
 #include "CWall.h"
 
-CWall::CWall( CWinAPIHandler* const winapi_handler, DIRECTION direction, const GAMECOORD& start, const GAMECOORD& end, char ch )
+CWall::CWall( CWinAPIHandler* const winapi_handler, WALL_DIRECTION direction, const GAME_COORD& start, const GAME_COORD& end, char ch )
 	: m_is_drawn(false),
 	  m_direction(direction),
 	  m_ch(ch)
 {
-	if( m_direction == DIRECTION_Horizontal )
+	if( m_direction == WALL_DIRECTION_Horizontal )
 	{
 		m_points.reserve( ( end.X - start.X + 1 ) );
 		for( short it = start.X; it <= end.X; it++ )
@@ -13,7 +13,7 @@ CWall::CWall( CWinAPIHandler* const winapi_handler, DIRECTION direction, const G
 			m_points.push_back( CPoint( winapi_handler, it, start.Y, m_ch ) );
 		}
 	}
-	else if( m_direction == DIRECTION_Vertical )
+	else if( m_direction == WALL_DIRECTION_Vertical )
 	{
 		m_points.reserve( ( end.Y - start.Y + 1 ) );
 		for( short it = start.Y; it <= end.Y; it++ )
