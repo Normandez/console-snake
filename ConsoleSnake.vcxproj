@@ -84,6 +84,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -106,6 +107,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -113,7 +115,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\CGame.cpp" />
+    <ClCompile Include="src\CGameField.cpp" />
+    <ClCompile Include="src\CGameWorld.cpp" />
+    <ClCompile Include="src\CPoint.cpp" />
+    <ClCompile Include="src\CWall.cpp" />
     <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\CGame.h" />
+    <ClInclude Include="include\CGameField.h" />
+    <ClInclude Include="include\CGameWorld.h" />
+    <ClInclude Include="include\CPoint.h" />
+    <ClInclude Include="include\CWall.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
