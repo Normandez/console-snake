@@ -1,0 +1,8 @@
+.vs
+x64
+Debug
+Release
+*.db
+*.opendb
+*.vcxproj.filters
+*.vcxproj.user
