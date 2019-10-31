@@ -120,6 +120,7 @@
     <ClCompile Include="src\CGameWorld.cpp" />
     <ClCompile Include="src\CPoint.cpp" />
     <ClCompile Include="src\CWall.cpp" />
+    <ClCompile Include="src\CWinAPIHandler.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +129,7 @@
     <ClInclude Include="include\CGameWorld.h" />
     <ClInclude Include="include\CPoint.h" />
     <ClInclude Include="include\CWall.h" />
+    <ClInclude Include="include\CWinAPIHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

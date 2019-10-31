@@ -1,7 +1,7 @@
 #include "CGameWorld.h"
 
-CGameWorld::CGameWorld()
-	: m_game_field( 70, 23 )
+CGameWorld::CGameWorld( CWinAPIHandler* const winapi_handler )
+	: m_game_field( winapi_handler, 70, 23 )
 {
 	
 }

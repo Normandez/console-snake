@@ -1,23 +1,19 @@
 #include "CGame.h"
 
-using namespace Game;
-
 CGame::CGame()
+	: m_winapi_handler( new CWinAPIHandler() ),
+	  m_game_world(m_winapi_handler)
 {
 
 }
 
 CGame::~CGame()
 {
-
+	delete m_winapi_handler;
 }
 
 void CGame::Init()
 {
-	CONSOLE_CURSOR_INFO cursor_info;
-	cursor_info.dwSize = 100;
-	cursor_info.bVisible = FALSE;
-	::SetConsoleCursorInfo( CONSOLE_HANDLE, &cursor_info );
-
+	m_winapi_handler->HideCursor();
 	m_game_world.Init();
 }

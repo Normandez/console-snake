@@ -3,10 +3,12 @@
 
 #include "CGameField.h"
 
+class CWinAPIHandler;
+
 class CGameWorld
 {
 public:
-	CGameWorld();
+	CGameWorld( CWinAPIHandler* const winapi_handler );
 	~CGameWorld();
 
 	void Init();

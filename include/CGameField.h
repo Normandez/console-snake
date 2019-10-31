@@ -3,10 +3,12 @@
 
 #include "CWall.h"
 
+class CWinAPIHandler;
+
 class CGameField
 {
 public:
-	CGameField( short width, short height, char wall_ch = '#' );
+	CGameField( CWinAPIHandler* const winapi_handler, short width, short height, char wall_ch = '#' );
 	~CGameField();
 
 	void Draw();

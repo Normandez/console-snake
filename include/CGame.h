@@ -1,15 +1,8 @@
 #ifndef CGAME_H
 #define CGAME_H
 
+#include "CWinAPIHandler.h"
 #include "CGameWorld.h"
-
-#include <Windows.h>
-#include <iostream>
-
-namespace Game
-{
-	const static HANDLE CONSOLE_HANDLE = ::GetStdHandle(STD_OUTPUT_HANDLE);		// TODO: !!!INVALID_HANDLE_VALUE handling should add here!!!
-};
 
 class CGame
 {
@@ -20,6 +13,8 @@ public:
 	void Init();
 
 private:
+	CWinAPIHandler* m_winapi_handler;
+
 	CGameWorld m_game_world;
 
 };

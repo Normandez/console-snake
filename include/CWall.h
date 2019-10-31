@@ -5,6 +5,8 @@
 
 #include <vector>
 
+class CWinAPIHandler;
+
 enum DIRECTION
 {
 	DIRECTION_Vertical,		// 0
@@ -15,7 +17,7 @@ class CWall
 {
 
 public:
-	CWall( DIRECTION direction, const GAMECOORD& start, const GAMECOORD& end, char ch );
+	CWall( CWinAPIHandler* const winapi_handler, DIRECTION direction, const GAMECOORD& start, const GAMECOORD& end, char ch );
 	~CWall();
 
 	void Draw();
